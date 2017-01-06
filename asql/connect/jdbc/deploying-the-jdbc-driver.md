@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Deploying the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you deploy an application that depends on the Microsoft JDBC Driver for SQL Server, you must redistribute the JDBC driver together with your application. Unlike Windows Data Access Components (Windows DAC), which is a component of the Windows operating system, the JDBC driver is considered to be a component of SQL Server.  
   

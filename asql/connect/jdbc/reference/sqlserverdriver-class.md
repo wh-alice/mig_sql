@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerDriver Class
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Represents the Microsoft JDBC Driver for SQL Server. This class includes methods for connecting to a SQL Server database, and for obtaining information about the JDBC driver.  
   

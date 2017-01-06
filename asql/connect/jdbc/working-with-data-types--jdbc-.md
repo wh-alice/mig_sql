@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Working with Data Types (JDBC)
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The primary function of the Microsoft JDBC Driver for SQL Server is to allow Java developers to access data contained in SQL Server databases. To accomplish this, the JDBC driver mediates the conversion between SQL Server data types and Java language types and objects.  
   

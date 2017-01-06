@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setTransactionTimeout Method (SQLServerXAResource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the current transaction time out value for this [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) object.  
   

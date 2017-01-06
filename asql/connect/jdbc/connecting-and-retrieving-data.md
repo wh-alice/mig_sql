@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connecting and Retrieving Data
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you are working with the Microsoft JDBC Driver for SQL Server, there are two primary methods for establishing a connection to a SQL Server database. One is to set connection properties in the connection URL, and then call the getConnection method of the DriverManager class to return a [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
   

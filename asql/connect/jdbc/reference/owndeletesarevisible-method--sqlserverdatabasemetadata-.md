@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # ownDeletesAreVisible Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether a result set's own deletes are visible.  
   

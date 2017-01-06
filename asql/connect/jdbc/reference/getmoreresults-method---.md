@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getMoreResults Method ()
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Moves to the next result of this [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setTrustStorePassword Method (SQLServerDataSource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the password that is used to check the integrity of the trustStore data.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # JDBC Driver API Reference
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server provides an API that can be used within Java programming code to connect to and interact with a MicrosoftSQL Server database.  
   

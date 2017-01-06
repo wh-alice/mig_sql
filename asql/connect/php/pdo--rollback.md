@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # PDO::rollback
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Discards database commands that were issued after calling [PDO::beginTransaction](../../connect/php/pdo--begintransaction.md) and returns the connection to auto commit mode.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Understanding Data Type Differences
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   There are a number of differences between the Java programming language data types and SQL Server data types. The Microsoft JDBC Driver for SQL Server helps to facilitate those differences through various types of conversions.  
   

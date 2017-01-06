@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Default PHP Data Types
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 When retrieving data from the server, the Microsoft Drivers for PHP for SQL Server converts data to a default PHP data type if no PHP data type has been specified by the user.  
   

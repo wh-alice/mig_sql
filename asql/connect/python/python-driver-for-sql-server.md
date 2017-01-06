@@ -15,12 +15,14 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Python SQL Driver
+![Download](../../ssdt/media/download.png)[Install pyodbc Python Driver](../../connect/python/pyodbc/step-1--configure-development-environment-for-pyodbc-python-development.md) ![Download](../../ssdt/media/download.png)[Install pymssql Python Driver](../../connect/python/pymssql/step-1--configure-development-environment-for-pymssql-python-development.md)
+
 You can  connect to a SQL Database using Python on Windows, Linux, or Mac.   
   
 ## Getting Started  
 There are several python SQL Drivers available.  Choose which one you want to use, and configure your development environment:
-* [Python SQL Driver - pyodbc](Python%20SQL%20Driver%20-%20pyodbc.md)
-* [Python SQL Driver - pymssql](Python%20SQL%20Driver%20-%20pymssql.md)
+* [Python SQL Driver - pyodbc](../../connect/python/pyodbc/python-sql-driver---pyodbc.md)
+* [Python SQL Driver - pymssql](../../connect/python/pymssql/python-sql-driver---pymssql.md)
   
 ## Documentation  
 [Python documentation](https://www.python.org/doc/)  

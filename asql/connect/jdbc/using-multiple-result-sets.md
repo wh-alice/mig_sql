@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Multiple Result Sets
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When working with inline SQL or SQL Server stored procedures that return more than one result set, the Microsoft JDBC Driver for SQL Server provides the [getResultSet](../../connect/jdbc/reference/getresultset-method--sqlserverstatement-.md) method in the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class for retrieving each set of data returned. In addition, when running a statement that returns more than one result set, you can use the [execute](../../connect/jdbc/reference/execute-method--sqlserverstatement-.md) method of the SQLServerStatement class, because it will return a **boolean** value that indicates if the value returned is a result set or an update count.  
   

@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
-[!INCLUDE[Driver_NodeJS_Download](../../connect/node-js/includes)]
+![Download](../../ssdt/media/download.png)[Install Node.js Driver](http://msdn.microsoft.com/library/mt652094.aspx)
 
 This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
   

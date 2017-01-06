@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getMetaData Method (SQLServerResultSet)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the number, types, and properties of the columns for this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object.  
   

@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Integrated Authentication
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 The Microsoft ODBC Driver for SQL Server on Linux supports connections that use Kerberos integrated authentication. The ODBC driver on Linux supports MIT Kerberos Key Distribution Center (KDC), and works with Generic Security Services Application Program Interface (GSSAPI) and Kerberos libraries.  
   

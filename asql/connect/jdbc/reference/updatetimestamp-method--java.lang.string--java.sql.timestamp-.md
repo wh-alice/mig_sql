@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # updateTimestamp Method (java.lang.String, java.sql.Timestamp)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Updates the designated column with a timestamp value given the column name.  
   

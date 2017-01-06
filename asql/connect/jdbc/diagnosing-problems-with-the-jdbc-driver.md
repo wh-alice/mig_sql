@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Diagnosing Problems with the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   No matter how well an application is designed and developed, problems will inevitably occur. When they do, it is important to have some techniques for diagnosing those problems. When using the Microsoft JDBC Driver for SQL Server, some common problems that can occur are not having the right driver version or being unable to connect to a database.  
   

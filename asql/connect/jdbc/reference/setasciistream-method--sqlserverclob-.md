@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setAsciiStream Method (SQLServerClob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns a stream to be used to write ASCII characters to the CLOB starting at the given position.  
   

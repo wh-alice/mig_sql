@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # updateNCharacterStream Method (java.lang.String, java.io.Reader, long)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Updates the designated column with a character stream value, which will have the specified number of bytes.  
   

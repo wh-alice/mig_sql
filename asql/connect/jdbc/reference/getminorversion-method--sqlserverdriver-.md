@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getMinorVersion Method (SQLServerDriver)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the minor version number of the Microsoft JDBC Driver for SQL Server.  
   

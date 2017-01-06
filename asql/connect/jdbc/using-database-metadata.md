@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Database Metadata
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   To query a database for information about what it supports, the Microsoft JDBC Driver for SQL Server implements the [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) class. This class contains numerous methods that return information in the form of a single value, or as a result set.  
   

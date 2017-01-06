@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getTimestamp Method (DateTimeOffset)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the point in time represented by this **DateTimeOffset** object as a java.sql.Timestamp.  
   

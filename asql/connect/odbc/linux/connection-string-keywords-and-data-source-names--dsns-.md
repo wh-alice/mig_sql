@@ -30,7 +30,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connection String Keywords and Data Source Names (DSNs)
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 This topic discusses how you can create a connection to a SQL Server database.  
   

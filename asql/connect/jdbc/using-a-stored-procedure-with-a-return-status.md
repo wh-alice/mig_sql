@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using a Stored Procedure with a Return Status
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   A SQL Server stored procedure that you can call is one that returns a status or a result parameter. This is typically used to indicate the success or failure of the stored procedure. The Microsoft JDBC Driver for SQL Server provides the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class, which you can use to call this kind of stored procedure and to process the data that it returns.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # wasNull Method (SQLServerResultSet)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Verifies if the last value read was a null value.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerDataSourceObjectFactory Class
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Represents an object factory to materialize data sources from the Java Naming and Directory Interface (JNDI).  
   

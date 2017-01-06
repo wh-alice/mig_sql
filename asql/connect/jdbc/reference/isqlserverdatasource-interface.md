@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # ISQLServerDataSource Interface
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   A factory to create connections to the data source represented by this object. This interface was added in SQL Server JDBC Driver 3.0.  
   

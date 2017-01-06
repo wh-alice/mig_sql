@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getCharacterStream Method (long, long)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the **Clob** data as a Reader object or as a stream of characters with the specified position and length.  
   

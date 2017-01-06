@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Understanding Row Locking
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server uses SQL Server row locks. These implement concurrency control among multiple users who are performing modifications in a database at the same time. By default, transactions and locks are managed on a per-connection basis. For example, if an application opens two JDBC connections, locks that are acquired by one connection cannot be shared with the other connection. Neither connection can acquire locks that would conflict with locks held by the other connection.  
   

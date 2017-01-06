@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Closing Objects when Not In Use
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you work with objects of Microsoft JDBC Driver for SQL Server, particularly the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) or one of the Statement objects such as [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) or [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), you should explicitly close them by using their close methods when they are no longer needed. This improves performance by freeing up driver and server resources as soon as possible, instead of waiting for the Java Virtual Machine garbage collector to do it for you.  
   

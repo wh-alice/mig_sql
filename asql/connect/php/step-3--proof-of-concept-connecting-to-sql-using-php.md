@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 ## Step 1:  Connect  
   

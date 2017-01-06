@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setFetchDirection Method (SQLServerResultSet)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Gives a hint as to the direction in which the rows in this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object will be processed.  
   

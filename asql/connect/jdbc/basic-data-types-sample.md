@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Basic Data Types Sample
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use result set getter methods to retrieve basic SQL Server data type values, and how to use result set update methods to update those values.  
   

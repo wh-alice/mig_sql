@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Reading Large Data Sample
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This Microsoft JDBC Driver for SQL Server sample application demonstrates how to retrieve a large single-column value from a SQL Server database by using the [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method--sqlserverresultset-.md) method.  
   

@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Default SQL Server Data Types
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 When sending data to the server, the Microsoft Drivers for PHP for SQL Server converts data from its PHP data type to a SQL Server data type if no SQL Server data type has been specified by the user. The table that follows lists the PHP data type (the data type being sent to the server) and the default SQL Server data type (the data type to which the data is converted). For details about how to specify data types when sending data to the server, see [How to: Specify SQL Server Data Types When Using the SQLSRV Driver](../../connect/php/how-to--specify-sql-server-data-types-when-using-the-sqlsrv-driver.md).  
   

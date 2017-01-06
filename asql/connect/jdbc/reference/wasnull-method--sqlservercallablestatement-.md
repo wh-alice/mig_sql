@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # wasNull Method (SQLServerCallableStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether the last OUT parameter read had the value of SQL NULL.  
   

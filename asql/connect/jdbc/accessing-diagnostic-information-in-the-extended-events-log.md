@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Accessing Diagnostic Information in the Extended Events Log
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   In the Microsoft JDBC Driver 4.0 for SQL Server, tracing ([Tracing Driver Operation](../../connect/jdbc/tracing-driver-operation.md)) has been updated to make it easier to easier to correlate client events with diagnostic information, such as connection failures, from the server's connectivity ring buffer and application performance information in the extended events log. For information about reading the extended events log, see [View Event Session Data](http://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
   

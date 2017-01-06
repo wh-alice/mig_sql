@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerSavepoint Constructor (SQLServerConnection, java.lang.StringName)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Initializes a new instance of the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class based on the given connection and name.  
   

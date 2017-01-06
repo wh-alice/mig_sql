@@ -33,7 +33,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_rollback
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Rolls back the current transaction on the specified connection and returns the connection to the auto-commit mode. The current transaction includes all statements on the specified connection that were executed after the call to [sqlsrv_begin_transaction](../../connect/php/sqlsrv_begin_transaction.md) and before any calls to **sqlsrv_rollback** or [sqlsrv_commit](../../connect/php/sqlsrv_commit.md).  
   

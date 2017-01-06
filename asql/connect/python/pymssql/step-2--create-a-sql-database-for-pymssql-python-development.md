@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Step 2: Create a SQL database for pymssql Python development
-![Download](/Image/download.png)[Install pyodbc Python Driver](Step%201:%20Configure%20development%20environment%20for%20pyodbc%20Python%20development.md) ![Download](/Image/download.png)[Install pymssql Python Driver](../../../connect/python/pymssql/step-1--configure-development-environment-for-pymssql-python-development.md)
+![Download](../../../ssdt/media/download.png)[Install pyodbc Python Driver](../../../connect/python/pyodbc/step-1--configure-development-environment-for-pyodbc-python-development.md) ![Download](../../../ssdt/media/download.png)[Install pymssql Python Driver](../../../connect/python/pymssql/step-1--configure-development-environment-for-pymssql-python-development.md)
 
 The samples in this section only work with the AdventureWorks schema, on either Microsoft SQL Server or Azure SQL Database.  
  

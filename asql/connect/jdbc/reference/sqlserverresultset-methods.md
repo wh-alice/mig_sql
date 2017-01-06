@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerResultSet Methods
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For information about the members of SQLServerResultSet, see [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
   

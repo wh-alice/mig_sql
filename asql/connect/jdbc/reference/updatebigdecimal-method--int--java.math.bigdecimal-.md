@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # updateBigDecimal Method (int, java.math.BigDecimal)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Updates the designated column with a BigDecimal object given the column index.  
   

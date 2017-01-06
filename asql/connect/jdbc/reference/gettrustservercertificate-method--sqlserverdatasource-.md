@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getTrustServerCertificate Method (SQLServerDataSource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns a **Boolean** value that indicates if the trustServerCertificate property is enabled.  
   

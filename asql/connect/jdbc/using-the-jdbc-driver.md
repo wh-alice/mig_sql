@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This section provides quick start instructions for making a simple connection to a SQL Server database by using the Microsoft JDBC Driver for SQL Server. Before you connect to a SQL Server database, SQL Server must first be installed on either your local computer or a server, and the JDBC driver must be installed on your local computer.  
   

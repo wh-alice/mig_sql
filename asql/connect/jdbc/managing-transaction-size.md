@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Managing Transaction Size
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you work with transactions, it is important to keep your transactions as brief as possible. The default mode of auto-commit, which you can enable or disable by using the [setAutoCommit](../../connect/jdbc/reference/setautocommit-method--sqlserverconnection-.md) method, will commit every action for you. This is the easiest mode to work with for most developers.  
   

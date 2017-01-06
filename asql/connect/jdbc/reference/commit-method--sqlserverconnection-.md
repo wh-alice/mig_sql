@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # commit Method (SQLServerConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Makes all changes made since the previous commit or rollback permanent, and releases any database locks currently held by this [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
   

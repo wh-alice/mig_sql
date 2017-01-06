@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Microsoft PHP Driver for SQL Server
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The SQL Server Driver for PHP is designed to enable reliable, scalable integration with SQL Server for PHP applications. The SQL Server Driver for PHP is a PHP extension that allows the reading and writing of SQL Server data from within PHP scripts. It provides interfaces for accessing data in all Editions of SQL Server 2005 and later (including Express Editions) as well as Azure SQL Database, and makes use of PHP features, including PHP streams to read and write large objects.  
   

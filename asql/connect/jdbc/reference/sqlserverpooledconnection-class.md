@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerPooledConnection Class
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Represents a physical database connection in a connection pool.  
   

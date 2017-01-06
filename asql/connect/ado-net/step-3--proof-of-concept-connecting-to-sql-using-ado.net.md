@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using ADO.NET
-[!INCLUDE[Driver_ADODotNet_Download](../../connect/ado-net/includes)]
+![Download](../../ssdt/media/download.png)[Download .Net Driver](https://msdn.microsoft.com/vstudio/aa496123.aspx)
 
 
 - Previous article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](../../connect/ado-net/step-2--create-a-sql-database-for-ado.net-development.md)  

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerParameterMetaData Methods
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For information on the members of [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md), see [SQLServerParameterMetaData Members](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md).  
   

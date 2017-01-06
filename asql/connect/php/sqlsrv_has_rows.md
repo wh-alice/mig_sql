@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_has_rows
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Indicates if the result set has one or more rows.  
   

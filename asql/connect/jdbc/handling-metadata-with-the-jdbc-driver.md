@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Handling Metadata with the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server can be used to work with metadata in a SQL Server database in a variety of ways. The JDBC driver can be used to get metadata about the database, a result set, or parameters.  
   

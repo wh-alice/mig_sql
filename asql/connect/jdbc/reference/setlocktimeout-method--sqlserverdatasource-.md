@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setLockTimeout Method (SQLServerDataSource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets an **int** value that indicates the number of milliseconds to wait before the database reports a lock time out.  
   

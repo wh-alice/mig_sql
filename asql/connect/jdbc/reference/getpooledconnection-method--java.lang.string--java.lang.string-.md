@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getPooledConnection Method (java.lang.String, java.lang.String)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Tries to establish a physical database connection that can be used as a pooled connection based on the given user name and password.  
   

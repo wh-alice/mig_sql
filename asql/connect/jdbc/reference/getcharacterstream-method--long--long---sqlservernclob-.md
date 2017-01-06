@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getCharacterStream Method (long, long) (SQLServerNClob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the **NCLOB** data as a **Reader** object or as a stream of characters with a specified position and length.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # executeBatch Method (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Submits a batch of commands to the database to be run. If all commands run successfully, returns an array of update counts.  
   

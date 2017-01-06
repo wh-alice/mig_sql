@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # registerOutParameter Method (java.lang.String, int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Registers the OUT parameter with the specified name to the given JDBC type.  
   

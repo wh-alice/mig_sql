@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getMaxColumnsInGroupBy Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the maximum number of columns that this database allows in a GROUP BY clause.  
   

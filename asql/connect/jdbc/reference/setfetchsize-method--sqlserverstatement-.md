@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setFetchSize Method (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Gives the Microsoft JDBC Driver for SQL Server a hint as to the number of rows that should be fetched from the database when more rows are needed.  
   

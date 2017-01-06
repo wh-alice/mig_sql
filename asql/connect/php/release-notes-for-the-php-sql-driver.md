@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Release Notes for the PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic discusses what was added in the each version of the Microsoft Drivers for PHP for SQL Server.  
 ## What's New in Version 4.0  

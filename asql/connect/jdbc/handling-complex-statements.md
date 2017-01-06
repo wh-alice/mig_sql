@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Handling Complex Statements
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you use the Microsoft JDBC Driver for SQL Server, you might have to handle complex statements, including statements that are dynamically generated at runtime. Complex statements often perform a variety of tasks, including updates, inserts, and deletes. These types of statements might also return multiple result sets and output parameters. In these situations, the Java code that runs the statements might not know in advance the types and number of objects and data returned.  
   

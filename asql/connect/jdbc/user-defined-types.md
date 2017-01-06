@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # User Defined Types
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   User-defined types (UDTs) were introduced in SQL Server 2005 to allow a developer to extend the server's scalar type system by storing common language runtime (CLR) objects in a SQL Server database. UDTs can contain multiple elements and can have behaviors, unlike the traditional alias data types, that consist of a single SQL Server system data type. Previously, UDTs were restricted to a maximum size of 8 kilobytes. In SQL Server 2008, support was added for UDTs larger than 64 kilobytes. Beginning in version 3.0, the JDBC Driver also supports UDTs larger than 64 kilobytes when you specify the UserDefined format.  
   

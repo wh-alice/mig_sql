@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # PDOStatement::bindValue
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Binds a value to a named or question mark placeholder in the SQL statement.  
   

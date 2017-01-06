@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setWorkstationID Method (SQLServerDataSource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the name of the client computer name that is used to connect to the data source.  
   

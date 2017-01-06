@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Holdability
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   By default, a result set created within a transaction is kept open after the transaction is committed to the database, or when it is rolled back. However, it is sometimes useful for the result set to be closed, after the transaction has been committed. To do this, the Microsoft JDBC Driver for SQL Server supports the use of result set holdability.  
   

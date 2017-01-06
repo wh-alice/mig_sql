@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # PDOStatement::fetchAll
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Returns the rows in a result set in an array.  
   

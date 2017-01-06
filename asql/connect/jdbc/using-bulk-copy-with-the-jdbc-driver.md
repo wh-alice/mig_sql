@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Bulk Copy with the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Microsoft SQL Server includes a popular command-line utility named **bcp** for quickly bulk copying large files into tables or views in SQL Server databases. The SQLServerBulkCopy class allows you to write code solutions in Java that provide similar functionality. There are other ways to load data into a SQL Server table (INSERT statements, for example) but SQLServerBulkCopy offers a significant performance advantage over them.  
   

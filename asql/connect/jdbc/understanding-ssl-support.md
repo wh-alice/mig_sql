@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Understanding SSL Support
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When connecting to SQL Server, if the application requests encryption and the instance of SQL Server is configured to support SSL encryption, the Microsoft JDBC Driver for SQL Server initiates the SSL handshake. The handshake allows the server and client to negotiate the encryption and cryptographic algorithms to be used to protect data. After the SSL handshake is complete, the client and server can send the encrypted data securely. During SSL handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client is responsible for validating that the certificate authority is one that the client trusts.  
   

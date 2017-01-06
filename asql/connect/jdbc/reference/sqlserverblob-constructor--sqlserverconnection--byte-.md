@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerBlob Constructor (SQLServerConnection, byte)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Initializes a new instance of the [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) class when given a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object and a **byte** array.  
   

@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Data Access Tracing with the ODBC Driver on Linux
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 The ODBC Driver for SQL Server on Linux supports tracing of ODBC API call entry and exit.  
   

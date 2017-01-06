@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # DateTimeOffset Class
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This type represents an object of type microsoft.sql.DateTimeOffset and is the Java type that corresponds to the SQL Server **datetimeoffset** data type.  
   

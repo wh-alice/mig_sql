@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Adaptive Buffering
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Adaptive buffering is designed to retrieve any kind of large-value data without the overhead of server cursors. Applications can use the adaptive buffering feature with all versions of SQL Server that are supported by the driver.  
   

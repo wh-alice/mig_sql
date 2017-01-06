@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # releaseSavepoint Method (SQLServerConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Removes the given [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) object from the current transaction.  
   

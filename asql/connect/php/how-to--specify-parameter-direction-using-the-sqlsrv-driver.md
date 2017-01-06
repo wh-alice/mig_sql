@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # How to: Specify Parameter Direction Using the SQLSRV Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic describes how to use the SQLSRV driver to specify parameter direction when you call a stored procedure. Note that the parameter direction is specified when you construct a parameter array (step 3) that is passed to [sqlsrv_query](../../connect/php/sqlsrv_query.md) or [sqlsrv_prepare](../../connect/php/sqlsrv_prepare.md).  
   

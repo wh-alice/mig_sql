@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Parameter Metadata
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   To query a [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) or a [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) object about the parameters that they contain, the Microsoft JDBC Driver for SQL Server implements the [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) class. This class contains numerous fields and methods that return information in the form of a single value.  
   

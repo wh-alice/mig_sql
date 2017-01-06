@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # storesUpperCaseIdentifiers Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether this database treats mixed-case SQL identifiers that are not enclosed in quotation marks as case-insensitive and stores them in uppercase.  
   

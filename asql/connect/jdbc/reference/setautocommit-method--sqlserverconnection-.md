@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setAutoCommit Method (SQLServerConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the auto-commit mode for this [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object to the given state.  
   

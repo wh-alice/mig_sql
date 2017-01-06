@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getSchemas Method (String, String)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the schema names that are available in the current database by using the specified catalog name and the schema name.  
   

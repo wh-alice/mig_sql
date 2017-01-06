@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # PDO::exec
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Prepares and executes an SQL statement in a single function call, returning the number of rows affected by the statement.  
   

@@ -33,7 +33,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_get_field
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Retrieves data from the specified field of the current row. Field data must be accessed in order. For example, data from the first field cannot be accessed after data from the second field has been accessed.  
   

@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 2: Create a SQL database for Node.js development
-[!INCLUDE[Driver_NodeJS_Download](../../connect/node-js/includes)]
+![Download](../../ssdt/media/download.png)[Install Node.js Driver](http://msdn.microsoft.com/library/mt652094.aspx)
 
 The samples in this section only work with the AdventureWorks schema, on either Microsoft SQL Server or Azure SQL Database.  
  

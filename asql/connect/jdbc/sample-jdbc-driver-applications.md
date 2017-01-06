@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Sample JDBC Driver Applications
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server sample applications demonstrate various features of the JDBC driver. Additionally, they demonstrate good programming practices that you can follow when using the JDBC driver with a SQL Server database.  
   

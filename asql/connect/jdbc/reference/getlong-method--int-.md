@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getLong Method (int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the value of the designated parameter as a **long** in the Java programming language given the parameter index.  
   

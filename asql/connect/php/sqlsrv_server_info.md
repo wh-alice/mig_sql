@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_server_info
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Returns information about the server. A connection must be established before calling this function.  
   

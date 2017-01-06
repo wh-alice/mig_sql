@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Handling Errors
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When using the Microsoft JDBC Driver for SQL Server, all database error conditions are returned to your Java application as exceptions using the [SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md) class. The following methods of the SQLServerException class are inherited from java.sql.SQLException and java.lang.Throwable; and they can be used to return specific information about the SQL Server error that has occurred:  
   

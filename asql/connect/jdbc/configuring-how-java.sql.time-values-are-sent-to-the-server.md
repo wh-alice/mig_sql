@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Configuring How java.sql.Time Values are Sent to the Server
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   If you use a java.sql.Time object or the java.sql.Types.TIME JDBC type to set a parameter, you can configure how the java.sql.Time value is sent to the server; either as a SQL Server **time** type or as a **datetime** type.  
   

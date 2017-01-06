@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # prepare Method (SQLServerXAResource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Requests that the resource manager prepare for a transaction commit of the transaction specified by the given Xid object.  
   

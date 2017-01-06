@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # executeUpdate Method (java.lang.String, int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Runs the given SQL statement and signals the Microsoft JDBC Driver for SQL Server with the given flag about whether the auto-generated keys that are produced by this [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object should be made available for retrieval.  
   

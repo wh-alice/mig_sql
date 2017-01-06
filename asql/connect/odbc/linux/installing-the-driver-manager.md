@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Installing the Driver Manager
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 This topic contains instructions to install the unixODBC Driver Manager for use with Microsoft ODBC Driver 11 for SQL Server on Linux.  
   

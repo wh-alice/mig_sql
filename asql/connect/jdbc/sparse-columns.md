@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Sparse Columns
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve non null values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent.  
   

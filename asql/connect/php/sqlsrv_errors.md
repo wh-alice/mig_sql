@@ -33,7 +33,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_errors
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Returns extended error and/or warning information about the last **sqlsrv** operation performed.  
   

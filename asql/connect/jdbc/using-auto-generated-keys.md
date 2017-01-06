@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Auto Generated Keys
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server supports the optional JDBC 3.0 APIs to retrieve automatically generated row identifiers. The main value of this feature is to provide a way to make IDENTITY values available to an application that is updating a database table without a requiring a query and a second round-trip to the server.  
   

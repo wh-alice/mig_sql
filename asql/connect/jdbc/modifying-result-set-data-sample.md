@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Modifying Result Set Data Sample
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This Microsoft JDBC Driver for SQL Server sample application demonstrates how to retrieve an updateable set of data from a SQL Server database. Then, using methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.  
   

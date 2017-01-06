@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Microsoft ODBC Driver for SQL Server on Linux
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 The ODBC driver for SQL Server allows native applications (C/C++) running on Linux to connect to SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, and Microsoft Azure SQL Database.  
   

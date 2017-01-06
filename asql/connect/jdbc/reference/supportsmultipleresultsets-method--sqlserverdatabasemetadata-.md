@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # supportsMultipleResultSets Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether this database supports getting multiple [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objects from a single call to the [execute](../../../connect/jdbc/reference/execute-method---.md) method of the [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.  
   

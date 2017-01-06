@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Frequently Asked Questions (FAQ) for JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This article provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server.  
   

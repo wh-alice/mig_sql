@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Example Application (PDO_SQLSRV Driver)
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The AdventureWorks Product Reviews example application is a Web application that uses the PDO_SQLSRV driver of the Microsoft Drivers for PHP for SQL Server. The application lets a user search for products by entering a keyword, see reviews for a selected product, write a review for a selected product, and upload an image for a selected product.  
   

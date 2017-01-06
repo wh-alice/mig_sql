@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Programming with SQLXML
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This section describes how to use the Microsoft JDBC Driver for SQL Server API methods to store and retrieve an XML document in and from a relational database with **SQLXML** objects.  
   

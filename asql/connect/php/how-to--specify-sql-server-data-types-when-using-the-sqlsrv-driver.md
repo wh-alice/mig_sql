@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # How to: Specify SQL Server Data Types When Using the SQLSRV Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic demonstrates how to use the SQLSRV driver to specify the SQL Server data type for data that is sent to the server. This topic does not apply when using the PDO_SQLSRV driver.  
   

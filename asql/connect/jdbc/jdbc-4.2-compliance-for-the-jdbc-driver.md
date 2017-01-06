@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # JDBC 4.2 Compliance for the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
     
 > [!NOTE]  

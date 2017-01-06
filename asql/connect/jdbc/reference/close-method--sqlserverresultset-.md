@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # close Method (SQLServerResultSet)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Releases this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object's database and JDBC resources immediately instead of waiting for this to happen when it is automatically closed.  
   

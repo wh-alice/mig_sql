@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setBinaryStream Method (java.lang.String, java.io.InputStream, long)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the designated parameter to the specified input stream, which will have the specified number of bytes.  
   

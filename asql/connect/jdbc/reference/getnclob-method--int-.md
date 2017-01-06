@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getNClob Method (int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the value of the designated JDBC **NCLOB** parameter as a NClob object in the Java programming language.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # executeUpdate Method (java.lang.String) (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Runs the given SQL statement, which can be an INSERT, UPDATE, or DELETE statement; or an SQL statement that returns nothing, such as an SQL DDL statement. Beginning in MicrosoftSQL Server JDBC Driver 3.0, executeUpdate will return the correct number of rows updated in a MERGE operation.  
   

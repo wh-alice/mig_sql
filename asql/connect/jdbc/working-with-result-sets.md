@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Working with Result Sets
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you work with the data contained in a SQL Server database, one method of manipulating the data is to use a result set. The Microsoft JDBC Driver for SQL Server supports the use of result sets through the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object. By using the SQLServerResultSet object, you can retrieve the data returned from an SQL statement or stored procedure, update the data as needed, and then persist that data back to the database.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Wrappers and Interfaces
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server supports interfaces that allow you create a proxy of a class, and wrappers that let you access extensions to the JDBC API that are specific to the Microsoft JDBC Driver for SQL Server through a proxy interface.  
   

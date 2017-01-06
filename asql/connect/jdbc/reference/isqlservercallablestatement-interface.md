@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # ISQLServerCallableStatement Interface
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Represents JDBC callable statements. This interface was added in SQL Server JDBC Driver 3.0.  
   

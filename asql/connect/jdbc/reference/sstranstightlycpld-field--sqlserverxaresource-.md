@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Used to allow the tightly coupled XA transactions, which have different XA branch transaction IDs (XIDs) but have the same global transaction ID (GTRID).  
   

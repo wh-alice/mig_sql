@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerDataSource Class
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Represents a list of properties specific to connecting to a SQL Server database by using a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
   

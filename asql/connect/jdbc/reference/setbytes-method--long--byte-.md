@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setBytes Method (long, byte)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Writes the given array of bytes into the BLOB starting at the given position, and then returns the number of bytes written.  
   

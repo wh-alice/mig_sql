@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerBlob Constructors
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For information about the members of [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md), see [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md).  
   

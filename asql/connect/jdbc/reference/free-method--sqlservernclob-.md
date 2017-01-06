@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # free Method (SQLServerNClob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This method frees the NCLOB object and releases the resources that it holds.  
   

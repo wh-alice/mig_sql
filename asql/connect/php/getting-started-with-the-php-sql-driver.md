@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Getting Started with the PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This section provides information about the system requirements for using the Microsoft Drivers for PHP for SQL Server, and for loading the driver into the PHP process space.  
   

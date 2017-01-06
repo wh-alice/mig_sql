@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLSRV Driver API Reference
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The API name for the SQLSRV driver in the Microsoft Drivers for PHP for SQL Server is **sqlsrv**. All **sqlsrv** functions begin with **sqlsrv_** and are followed by a verb or a noun. Those followed by a verb perform some action and those followed by a noun return some form of metadata.  
   

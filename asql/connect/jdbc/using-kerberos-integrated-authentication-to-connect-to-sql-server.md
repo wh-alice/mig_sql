@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Kerberos Integrated Authentication to Connect to SQL Server
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Beginning in Microsoft JDBC Driver 4.0 for SQL Server, an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using type 4 Kerberos integrated authentication. See [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) for more information on connection properties. For more information on Kerberos, see [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=101449) and [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758).  
   

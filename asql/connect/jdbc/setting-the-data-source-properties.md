@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Setting the Data Source Properties
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Data sources are the preferred mechanism by which to create JDBC connections in a Java Platform, Enterprise Edition (Java EE) environment. Data sources provide connections, pooled connections, and distributed connections without hard-coding connection properties into Java code. All Microsoft JDBC Driver for SQL Server data sources can set or get the value of any property by using the appropriate setter and getter methods, respectively.  
   

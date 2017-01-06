@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getSuperTables Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves a description of the table hierarchies that are defined in a particular schema in this database.  
   

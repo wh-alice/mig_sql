@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # unwrap Method (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns an object that implements the specified interface to allow access to the Microsoft JDBC Driver for SQL Server-specific methods.  
   

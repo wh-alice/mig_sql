@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # How to: Send Data as a Stream
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The Microsoft Drivers for PHP for SQL Server takes advantage of PHP streams for sending large objects to the server. The examples in this topic demonstrate how to send data as a stream. The first example uses the SQLSRV driver to demonstrate the default behavior, which is to send all stream data at the time of query execution. The second example uses the SQLSRV driver to demonstrate how to send up to eight kilobytes (8K) of stream data at a time to the server.  
   

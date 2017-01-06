@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # addBatch Method (SQLServerPreparedStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Adds a set of parameters to the batch of commands for this [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) object.  
   

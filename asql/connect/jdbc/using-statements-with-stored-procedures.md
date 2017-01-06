@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Statements with Stored Procedures
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   A stored procedure is a database procedure, similar to a procedure in other programming languages, which is contained within the database itself. In SQL Server, stored procedures can be created by using Transact-SQL, or by using the common language runtime (CLR) and one of the Visual Studio programming languages such as Visual Basic or C#. Generally, SQL Server stored procedures can do the following:  
   

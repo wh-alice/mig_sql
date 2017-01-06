@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getCharacterStream Method ()
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the **CLOB** data as a Reader object or as a stream of characters.  
   

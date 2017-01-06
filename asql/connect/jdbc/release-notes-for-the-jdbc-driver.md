@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Release Notes for the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
     
 ## Updates in Microsoft JDBC Driver 6.0 for SQL Server

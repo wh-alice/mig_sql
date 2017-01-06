@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_num_rows
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Reports the number of rows in a result set.  
   

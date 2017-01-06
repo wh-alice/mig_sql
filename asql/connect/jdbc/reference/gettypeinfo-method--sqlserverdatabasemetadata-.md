@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getTypeInfo Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves a description of all the standard SQL types that are supported by the current database.  
   

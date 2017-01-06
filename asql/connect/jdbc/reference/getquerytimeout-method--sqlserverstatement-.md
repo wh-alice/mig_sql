@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getQueryTimeout Method (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the number of seconds Microsoft JDBC Driver for SQL Server will wait for this [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object to run.  
   

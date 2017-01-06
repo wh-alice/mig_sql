@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Supporting XML Data
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   SQL Server provides an **xml** data type that lets you store XML documents and fragments in a SQL Server database. The **xml** data type is a built-in data type in SQL Server, and is in some ways similar to other built-in types, such as **int** and **varchar**. Like other built-in types, you can use the **xml** data type as: a variable type, a parameter type, a function-return type, or a column type when you create a table; or in Transact-SQL CAST and CONVERT functions. In the JDBC driver, the **xml** data type can be mapped as a String, byte array, stream, CLOB, BLOB, or SQLXML object. String is the default mapping.  
   

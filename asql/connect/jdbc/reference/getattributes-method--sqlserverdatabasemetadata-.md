@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getAttributes Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves a description of the given attribute of the given type for a user-defined type that is available in the given schema and catalog.  
   

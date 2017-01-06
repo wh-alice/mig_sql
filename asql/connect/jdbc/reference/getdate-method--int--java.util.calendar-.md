@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getDate Method (int, java.util.Calendar)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the value of the designated parameter as a java.sql.Date object in the Java programming language given the parameter index and Calendar object.  
   

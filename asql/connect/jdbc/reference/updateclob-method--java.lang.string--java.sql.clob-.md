@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # updateClob Method (java.lang.String, java.sql.Clob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Updates the designated column with a java.sql.Clob value given the column name.  
   

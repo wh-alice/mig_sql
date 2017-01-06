@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Working with Large Data
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The JDBC driver provides support for adaptive buffering, which allows you to retrieve any kind of large-value data without the overhead of server cursors. With adaptive buffering, the Microsoft JDBC Driver for SQL Server retrieves statement execution results from the SQL Server as the application needs them, rather than all at once. The driver also discards the results as soon as the application can no longer access them.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Improving Performance and Reliability with the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   One aspect of application development that is common to all applications is the constant need to improve performance and reliability. There are a number of techniques for doing this with the Microsoft JDBC Driver for SQL Server.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Tracing Driver Operation
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server supports the use of tracing (or logging) to help resolve issues and problems with the JDBC driver when it is used in your application. To enable the use of tracing, the JDBC driver uses the logging APIs in java.util.logging, which provides a set of classes for creating Logger and LogRecord objects.  
   

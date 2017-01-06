@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # updateArray Method (java.lang.String, java.sql.Array)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Updates the designated column with an Array object given the column name.  
   

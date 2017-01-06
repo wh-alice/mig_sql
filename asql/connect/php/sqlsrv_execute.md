@@ -33,7 +33,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_execute
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Executes a previously prepared statement. See [sqlsrv_prepare](../../connect/php/sqlsrv_prepare.md) for information on preparing a statement for execution.  
   

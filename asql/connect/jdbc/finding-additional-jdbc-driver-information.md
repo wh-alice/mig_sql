@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Finding Additional JDBC Driver Information
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For more information about the Microsoft JDBC Driver for SQL Server and SQL Server development in general, see the following online resources:  
   

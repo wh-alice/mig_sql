@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # refreshRow Method (SQLServerResultSet)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Refreshes the current row with its most recent value in the database.  
   

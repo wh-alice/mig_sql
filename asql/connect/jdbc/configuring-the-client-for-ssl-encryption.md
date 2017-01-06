@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Configuring the Client for SSL Encryption
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server or client has to validate that the server is the correct server and its certificate is issued by a certificate authority that the client trusts. In order to validate the server certificate, the trust material must be supplied at connection time. In addition, the issuer of the server certificate must be a certificate authority that the client trusts.  
   

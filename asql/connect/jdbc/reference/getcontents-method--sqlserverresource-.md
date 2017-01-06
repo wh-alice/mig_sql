@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getContents Method (SQLServerResource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves error string information. This method is intended for internal use only.  
   

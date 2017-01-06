@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Microsoft ODBC Driver for SQL Server on Windows
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
   The Microsoft ODBC Driver 13.1, 13 and 11 for SQL Server are  stand-alone drivers that provide an application programming interface (API) that implements the standard ODBC interfaces to Microsoft SQL Server.  
   

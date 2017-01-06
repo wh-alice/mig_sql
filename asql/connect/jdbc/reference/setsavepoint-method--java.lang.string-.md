@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setSavepoint Method (java.lang.String)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Creates a savepoint with the given name in the current transaction, and returns the new [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) object that represents it.  
   

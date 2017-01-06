@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerException Methods
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For information about the members of [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), see [SQLServerException Members](../../../connect/jdbc/reference/sqlserverexception-members.md).  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerCallableStatement Class
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Lets you specify the stored procedure name to call along with input and output parameters. This class also provides the ability to retrieve the return status value with the ? = call( ?, ..) syntax.  
   

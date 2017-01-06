@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # position Method (byte, long)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the position of a specified pattern in the BLOB based on the given **byte** array pattern and starting index.  
   

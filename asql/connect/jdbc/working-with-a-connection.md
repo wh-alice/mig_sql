@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Working with a Connection
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The following sections provide examples of the different ways to connect to a SQL Server database by using the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class of the Microsoft JDBC Driver for SQL Server.  
   

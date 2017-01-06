@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getCatalogSeparator Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the **String** that this database uses as the separator between a catalog and table name.  
   

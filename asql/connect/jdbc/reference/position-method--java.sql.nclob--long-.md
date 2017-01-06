@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # position Method (java.sql.NClob, long)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the character position at which the specified **NClob** object *searchstr* appears in this **NClob** object.  
   

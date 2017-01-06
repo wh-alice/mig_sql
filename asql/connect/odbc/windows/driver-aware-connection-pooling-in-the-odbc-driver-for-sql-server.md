@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
   The ODBC Driver for SQL Server supports [Driver-Aware Connection Pooling](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). This topic describes the enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for SQL Server on Windows:  
   

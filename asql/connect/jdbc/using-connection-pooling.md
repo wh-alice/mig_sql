@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Connection Pooling
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition (Java EE) connection pooling. The JDBC driver implements the JDBC 3.0 required interfaces to enable the driver to participate in any connection-pooling implementation that is provided by middleware vendors and is JDBC 3.0-compliant. Middleware such as Java EE application servers frequently provides compliant connection-pooling facilities. The JDBC driver will participate in pooled connections in these environments.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Securing Connection Strings
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Protecting access to your data source is one of the most important goals of helping to secure an application. To limit access to your data source, you must take precautions to help secure connection information such as a user ID, password, and data source name. Storing a user ID and password in plain text, such as in your source code, presents a serious security issue. Even if you supply a compiled version of code that contains user ID and password information in an external source, your compiled code can potentially be disassembled and the user ID and password exposed. As a result, it is imperative that critical information such as a user ID and password not exist in your code.  
   

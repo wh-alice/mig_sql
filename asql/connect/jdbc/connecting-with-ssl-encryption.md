@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connecting with SSL Encryption
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The examples in this topic describe how to use connection string properties that allow applications to use Secure Sockets Layer (SSL) encryption in a Java application. For more information about these new connection string properties such as **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword**, and **hostNameInCertificate**, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).  
   

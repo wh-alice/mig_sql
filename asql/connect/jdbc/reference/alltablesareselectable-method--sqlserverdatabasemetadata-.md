@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # allTablesAreSelectable Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether the current user has permissions to use all the tables that are returned by the [getTables](../../../connect/jdbc/reference/gettables-method--sqlserverdatabasemetadata-.md) method in a SELECT statement.  
   

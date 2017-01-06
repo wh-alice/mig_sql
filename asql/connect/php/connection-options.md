@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connection Options
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic lists the options that are permitted in the associative array (when using [sqlsrv_connect](../../connect/php/sqlsrv_connect.md) in the SQLSRV driver) or the keywords that are permitted in the data source name (dsn) (when using [PDO::__construct](../../connect/php/pdo--__construct.md) in the PDO_SQLSRV driver).  
   

@@ -6,15 +6,17 @@ ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: 3
+ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
+caps.latest.revision: 4
 ms.author: "barbkess"
 robots: noindex,nofollow
 ---
-# WideWorldImportersDW Installation and configuration
-Installation and configuration instructions for the WideWorldImportersDW database.
+# Installation and configuration
+Wide World Importers OLTP database installation and configuration instructions.
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (or higher) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). To use the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
+## Prerequisites
+
+- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (or higher) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). For the best results use the June 2016 release or later.
 
 ## Download
@@ -23,11 +25,11 @@ The latest release of the sample:
 
 [wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
-Download the sample WideWorldImportersDW database backup/bacpac that corresponds to your edition of SQL Server or Azure SQL Database.
+Download the sample WideWorldImporters database backup/bacpac that corresponds to your edition of SQL Server or Azure SQL Database.
 
-Source code to recreate the sample database is available from the following location. Note that data population is based on ETL from the OLTP database (WideWorldImporters):
+Source code to recreate the sample database is available from the following location. Note that recreating the sample will result in slight differences in the data, since there is a random factor in the data generation:
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
 ## Install
 
@@ -52,16 +54,35 @@ To import a bacpac into a new SQL Database, you can use Management Studio.
 2. Open SQL Server Management Studio and connect to your server in Azure.
 3. Right-click on the **Databases** node, and select **Import Data-Tier Application**.
 4. In the **Import Settings** select **Import from local disk** and select the bacpac of the sample database from your file system.
-5. Under **Database Settings** change the database name to *WideWorldImportersDW* and select the target edition and service objective to use.
-6. Click **Next** and **Finish** to kick off deployment. It will take a few minutes to complete. When specifying a service objective lower than S2 it may take longer.
+5. Under **Database Settings** change the database name to *WideWorldImporters* and select the target edition and service objective to use.
+6. Click **Next** and **Finish** to kick off deployment. It will a few minutes to complete on a P1. If a lower pricing tier is desired, it is recommended to import into a new P1 database, and then change the pricing tier to the desired level.
 
 ## Configuration
 
-[Applies to SQL Server 2016 (and later) Developer/Evaluation/Enterprise Edition]
+### Full-Text Indexing
 
-The sample database can make use of PolyBase to query files in Hadoop or Azure blob storage. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup. Therefore, a post-installation step is required.
+The sample database can make use of Full-Text Indexing. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup (it is enabled by default in Azure SQL DB). Therefore, a post-installation step is required.
 
-1. In SQL Server Management Studio, connect to the WideWorldImportersDW database and open a new query window.
-2. Run the following T-SQL command to enable the use of PolyBase in the database:
+1. In SQL Server Management Studio, connect to the WideWorldImporters database and open a new query window.
+2. Run the following T-SQL command to enable the use of Full-Text Indexing in the database:
+    `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
-   EXECUTE [Application].[Configuration_ApplyPolyBase]
+
+### SQL Server Audit
+
+Applies to: SQL Server
+
+Enabling auditing in SQL Server requires server configuration. To enable SQL Server audit for the WideWorldImporters sample, run the following statement in the database:
+
+    EXECUTE [Application].[Configuration_ApplyAuditing]
+
+In Azure SQL Database, Audit is configured through the [Azure portal](https://portal.azure.com/).
+
+### Row-Level Security
+
+Applies to: Azure SQL Database
+
+Row-Level Security is not enabled by default in the bacpac download of WideWorldImporters. To enable Row-Level Security in the database, run the following stored procedure:
+
+    EXECUTE [Application].[Configuration_ApplyAuditing]
+

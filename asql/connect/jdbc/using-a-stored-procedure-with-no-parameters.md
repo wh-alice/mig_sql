@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using a Stored Procedure with No Parameters
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The simplest kind of SQL Server stored procedure that you can call is one that contains no parameters and returns a single result set. The Microsoft JDBC Driver for SQL Server provides the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class, which you can use to call this kind of stored procedure and process the data that it returns.  
   

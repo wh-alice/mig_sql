@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Converting Data Types
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The Microsoft Drivers for PHP for SQL Server allows you to specify data types when you send data to or retrieve data from SQL Server. Specifying data types is optional. If data types are not specified, default types will be used. The topics in this section describe how to specify data types and provide details about default data types.  
   

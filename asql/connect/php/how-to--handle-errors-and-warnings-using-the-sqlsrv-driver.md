@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # How to: Handle Errors and Warnings Using the SQLSRV Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 By default, the SQLSRV driver treats warnings as errors; a call to a **sqlsrv** function that generates an error or a warning will return **false**. This topic demonstrates how to turn off this default behavior and how to handle warnings separately from errors.  
   

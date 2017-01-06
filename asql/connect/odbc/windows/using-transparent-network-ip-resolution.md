@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Transparent Network IP Resolution
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 TransparentNetwork IP Resolution is a revision of the existing MultiSubnet Failover feature, available in ODBC Driver 13.1, that affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. It interacts with MultiSubnetFailover to provide the following three connection sequences:
 

@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Redistributing the Microsoft JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
     
 ## Register to Redistribute the Microsoft JDBC 4.0 Driver  

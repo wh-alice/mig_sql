@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Microsoft ADO.NET for SQL Server
-[!INCLUDE[Driver_ADODotNet_Download](../../connect/ado-net/includes)]
+![Download](../../ssdt/media/download.png)[Download .Net Driver](https://msdn.microsoft.com/vstudio/aa496123.aspx)
 
 ADO.NET is the core data access technology for .NET languages. Use the System.Data.SqlClient namespace to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.Oledb to access data from .NET languages using other data access technologies. Use System.Data.Dataset when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.  
   

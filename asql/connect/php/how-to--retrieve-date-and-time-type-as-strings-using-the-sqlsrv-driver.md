@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This feature was added in version 1.1 of the Microsoft Drivers for PHP for SQL Server and is only valid when using the SQLSRV driver for the Microsoft Drivers for PHP for SQL Server. It is an error to use the ReturnDatesAsStrings connection option with the PDO_SQLSRV driver.  
   

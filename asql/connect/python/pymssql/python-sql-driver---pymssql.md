@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Python SQL Driver - pymssql
-![Download](/Image/download.png)[Install pyodbc Python Driver](Step%201:%20Configure%20development%20environment%20for%20pyodbc%20Python%20development.md) ![Download](/Image/download.png)[Install pymssql Python Driver](../../../connect/python/pymssql/step-1--configure-development-environment-for-pymssql-python-development.md)
+![Download](../../../ssdt/media/download.png)[Install pyodbc Python Driver](../../../connect/python/pyodbc/step-1--configure-development-environment-for-pyodbc-python-development.md) ![Download](../../../ssdt/media/download.png)[Install pymssql Python Driver](../../../connect/python/pymssql/step-1--configure-development-environment-for-pymssql-python-development.md)
 
 ## Getting Started
 

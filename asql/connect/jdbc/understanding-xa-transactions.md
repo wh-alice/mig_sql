@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Understanding XA Transactions
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions. JDBC connections obtained from the [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) class can participate in standard distributed transaction processing environments such as Java Platform, Enterprise Edition (Java EE) application servers.  
   

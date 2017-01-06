@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Configuring IIS for PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic provides links to resources on the [Internet Information Services (IIS) Web site](http://go.microsoft.com/fwlink/?LinkId=121375) that are relevant to configuring IIS to host PHP applications. The resources listed here are specific to using FastCGI with IIS. FastCGI is a standard protocol that allows an application framework's Common Gateway Interface (CGI) executables to interface with the Web server. FastCGI differs from the standard CGI protocol in that FastCGI re-uses CGI processes for multiple requests.  
   

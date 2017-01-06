@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # System Requirements for the PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 To access data in a SQL Server or Azure SQL Database using the Microsoft Drivers for PHP for SQL Server, you must have the following components installed on your computer:  
   

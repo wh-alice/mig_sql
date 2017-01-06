@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getBytes Method (SQLServerBlob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Gets the BLOB data as an array of bytes.  
   

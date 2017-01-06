@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerPooledConnection Methods
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For information about the members of [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md), see [SQLServerPooledConnection Members](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md).  
   

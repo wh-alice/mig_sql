@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setCursorName Method (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the SQL cursor name to the given String, which will be used by subsequent execute methods.  
   

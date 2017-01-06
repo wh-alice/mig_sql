@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Support Resources for the PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic lists resources that may be helpful when you are developing applications that use the Microsoft Drivers for PHP for SQL Server.  
   

@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Programming Guidelines
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 The programming features of the Microsoft ODBC Driver 11 for SQL Server on Linux are based on ODBC in SQL Server Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). SQL Server Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
   

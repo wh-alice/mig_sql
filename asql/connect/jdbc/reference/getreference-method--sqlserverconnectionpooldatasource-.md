@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getReference Method (SQLServerConnectionPoolDataSource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns a reference to this [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) object.  
   

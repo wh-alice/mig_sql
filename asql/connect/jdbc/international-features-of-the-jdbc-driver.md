@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # International Features of the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The internationalization features of the Microsoft JDBC Driver for SQL Server include the following:  
   

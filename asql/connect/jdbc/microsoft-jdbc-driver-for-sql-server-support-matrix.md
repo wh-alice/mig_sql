@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Microsoft JDBC Driver for SQL Server Support Matrix
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.  
   

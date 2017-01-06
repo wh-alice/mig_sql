@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # addConnectionEventListener Method (SQLServerPooledConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Registers the given event listener so that it will be notified when an event occurs on this [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) object.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_free_stmt
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Frees all resources associated with the specified statement. The statement cannot be used again after this function has been called.  
   

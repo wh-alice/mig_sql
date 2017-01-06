@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # How to: Perform Transactions
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The SQLSRV driver of the Microsoft Drivers for PHP for SQL Server provides three functions for performing transactions:  
   

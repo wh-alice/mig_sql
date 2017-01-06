@@ -33,7 +33,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_fetch_array
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Retrieves the next row of data as a numerically indexed array, associative array, or both.  
   

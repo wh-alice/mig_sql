@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # isCatalogAtStart Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether a catalog appears at the start of a fully qualified table name.  
   

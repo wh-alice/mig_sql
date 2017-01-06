@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerResource Constructors
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For information about the members of [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md), see [SQLServerResource Members](../../../connect/jdbc/reference/sqlserverresource-members.md).  
   

@@ -33,7 +33,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_fetch
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Makes the next row of a result set available for reading. Use [sqlsrv_get_field](../../connect/php/sqlsrv_get_field.md) to read fields of the row.  
   

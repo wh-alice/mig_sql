@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # execute Method (java.lang.String, int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Runs the given SQL statement, which can return multiple results, and signals to Microsoft JDBC Driver for SQL Server that any auto-generated keys should be made available for retrieval.  
   

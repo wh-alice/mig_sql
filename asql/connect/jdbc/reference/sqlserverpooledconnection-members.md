@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerPooledConnection Members
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   The following tables list the members that are exposed by the [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) class.  
   

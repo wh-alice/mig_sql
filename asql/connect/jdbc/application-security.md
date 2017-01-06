@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Application Security
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you use the Microsoft JDBC Driver for SQL Server, it is important to take precautions to ensure the security of your application. The following sections provide information regarding steps you can take to help secure your application.  
   

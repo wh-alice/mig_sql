@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # close Method (SQLServerPreparedStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Releases the database and JDBC resources of this Statement object immediately instead of waiting for them to be automatically released.  
   

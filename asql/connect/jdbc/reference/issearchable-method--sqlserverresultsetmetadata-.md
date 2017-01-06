@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # isSearchable Method (SQLServerResultSetMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Indicates whether the designated column can be used in an SQL WHERE clause.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_rows_affected
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Returns the number of rows modified by the last statement executed. This function does not return the number of rows returned by a SELECT statement.  
   

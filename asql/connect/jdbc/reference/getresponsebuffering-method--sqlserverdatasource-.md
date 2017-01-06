@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getResponseBuffering Method (SQLServerDataSource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the response buffering mode for this [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) object.  
   

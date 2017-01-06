@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Known Issues in this Version of the Driver
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 This topic contains a list of known issues with the Microsoft ODBC Driver 11 and 13 for SQL Server on Linux.  
   

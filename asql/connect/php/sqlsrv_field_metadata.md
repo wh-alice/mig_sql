@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_field_metadata
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Retrieves metadata for the fields of a prepared statement. For information about preparing a statement, see [sqlsrv_query](../../connect/php/sqlsrv_query.md) or [sqlsrv_prepare](../../connect/php/sqlsrv_prepare.md). Note that **sqlsrv_field_metadata** can be called on any prepared statement, pre- or post-execution.  
   

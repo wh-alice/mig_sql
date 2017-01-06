@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # executeUpdate Method (java.lang.String, int[])
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Runs the given SQL statement and signals Microsoft JDBC Driver for SQL Server that the auto-generated keys that are indicated in the given array should be made available for retrieval.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getSchemaName Method (SQLServerResultSetMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Gets the table schema name for the designated column.  
   

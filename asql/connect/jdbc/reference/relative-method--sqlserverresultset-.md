@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # relative Method (SQLServerResultSet)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Moves the cursor the given amount of rows, relative to the current row, in either a positive or negative direction.  
   

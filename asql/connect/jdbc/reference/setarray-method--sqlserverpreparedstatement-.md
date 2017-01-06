@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setArray Method (SQLServerPreparedStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the designated parameter number to the given Array object.  
   

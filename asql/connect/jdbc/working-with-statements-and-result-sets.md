@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Working with Statements and Result Sets
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you work with the Microsoft JDBC Driver for SQL Server and the Statement and ResultSet objects that it provides, there are several techniques that you can use to improve the performance and reliability of your applications.  
   

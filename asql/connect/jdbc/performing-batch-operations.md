@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Performing Batch Operations
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   To improve performance when multiple updates to a SQL Server database are occurring, the Microsoft JDBC Driver for SQL Server provides the ability to submit multiple updates as a single unit of work, also referred to as a batch.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Performing Transactions with the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Transaction processing is a mandatory requirement of all applications that must guarantee consistency of their persistent data. With the Microsoft JDBC Driver for SQL Server, transaction processing can either be performed locally or distributed. Transactions are atomic, consistent, isolated, and durable (ACID) modules of execution.  
   

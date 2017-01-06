@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # doesMaxRowSizeIncludeBlobs Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether the return value for the [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method--sqlserverdatabasemetadata-.md) method includes the SQL data types LONGVARCHAR and LONGVARBINARY.  
   

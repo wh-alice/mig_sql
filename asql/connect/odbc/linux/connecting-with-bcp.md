@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connecting with bcp
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 The [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the Microsoft ODBC Driver for SQL Server on Linux.  
   

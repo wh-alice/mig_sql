@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # ODBC Driver on Linux Support for High Availability, Disaster Recovery
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 The ODBC driver for Linux supports AlwaysOn Availability Groups. For more information about AlwaysOn Availability Groups, see:  
   

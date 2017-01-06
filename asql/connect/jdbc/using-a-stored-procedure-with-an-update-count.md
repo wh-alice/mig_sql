@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using a Stored Procedure with an Update Count
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   To modify data in a SQL Server database by using a stored procedure, the Microsoft JDBC Driver for SQL Server provides the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class. By using the SQLServerCallableStatement class, you can call stored procedures that modify data that is contained in the database and return a count of the number of rows affected, also referred to as the update count.  
   

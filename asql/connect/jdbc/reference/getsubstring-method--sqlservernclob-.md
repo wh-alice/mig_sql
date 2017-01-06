@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getSubString Method (SQLServerNClob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves a copy of the specified substring in the **NCLOB** based on the specified starting position and the number of characters to copy.  
   

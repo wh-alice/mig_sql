@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setMaxRows Method (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the limit for the maximum number of rows that any [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object can contain to the given number.  
   

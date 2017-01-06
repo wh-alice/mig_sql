@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # JDBC Driver Support for High Availability, Disaster Recovery
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This topic discusses Microsoft JDBC Driver for SQL Server support for high-availability, disaster recovery -- AlwaysOn Availability Groups. For more information about AlwaysOn Availability Groups, see SQL Server 2012 Books Online.  
   

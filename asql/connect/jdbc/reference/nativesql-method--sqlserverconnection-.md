@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # nativeSQL Method (SQLServerConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Converts the given SQL statement into the native SQL grammar of the database server.  
   

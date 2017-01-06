@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerXADataSource Constructor ()
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Initializes a new instance of the [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) class.  
   

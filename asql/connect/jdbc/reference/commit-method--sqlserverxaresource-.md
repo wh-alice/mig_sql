@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # commit Method (SQLServerXAResource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Commits the global transaction that is specified by the given Xid object.  
   

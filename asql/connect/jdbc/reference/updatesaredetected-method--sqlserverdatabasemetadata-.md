@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # updatesAreDetected Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether or not a visible row update can be detected by calling the [rowUpdated](../../../connect/jdbc/reference/rowupdated-method--sqlserverresultset-.md) method of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) class.  
   

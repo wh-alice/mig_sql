@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getLogWriter Method (SQLServerDataSource)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This method is for internal use only. For more information about logging, see [Tracing Driver Operation](../../../connect/jdbc/tracing-driver-operation.md).  
   

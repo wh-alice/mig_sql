@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # PHP Driver for SQL Server Support for High Availability, Disaster Recovery
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic discusses Microsoft Drivers for PHP for SQL Server support (added in version 3.0) for high-availability, disaster recovery -- AlwaysOn Availability Groups.  AlwaysOn Availability Groups support was added in SQL Server 2012. For more information about AlwaysOn Availability Groups, see SQL Server Books Online.  
   

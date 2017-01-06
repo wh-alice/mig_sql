@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getBestRowIdentifier Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves a description of the optimal set of columns of a table that uniquely identifies a row.  
   

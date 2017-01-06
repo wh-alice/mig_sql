@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Always Encrypted with the Windows ODBC Driver
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
 This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and the [ODBC Driver 13.1 for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md).
 

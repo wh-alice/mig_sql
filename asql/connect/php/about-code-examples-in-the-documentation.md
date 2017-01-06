@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # About Code Examples in the Documentation
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 There are several points to note when you execute the code examples in the Microsoft Drivers for PHP for SQL Server documentation:  
   

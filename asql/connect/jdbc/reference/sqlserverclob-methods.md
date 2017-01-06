@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerClob Methods
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For information about the members of [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) class, see [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md).  
   

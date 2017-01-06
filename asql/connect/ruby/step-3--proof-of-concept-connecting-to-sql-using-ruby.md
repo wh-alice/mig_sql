@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using Ruby
-[!INCLUDE[Driver_Ruby_Download](../../connect/ruby/includes)]
+![Download](../../ssdt/media/download.png)[Install Ruby Driver](http://msdn.microsoft.com/library/mt711041.aspx)
 
 This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
   

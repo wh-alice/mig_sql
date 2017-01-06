@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLXML Data Type Sample
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This Microsoft JDBC Driver for SQL Server sample application demonstrates how to store XML data in a relational database, how to retrieve XML data from a database, and how to parse XML data with the **SQLXML** Java data type.  
   

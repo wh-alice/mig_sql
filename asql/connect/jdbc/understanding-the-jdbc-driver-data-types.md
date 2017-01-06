@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Understanding the JDBC Driver Data Types
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Microsoft JDBC Driver for SQL Server supports the use of JDBC basic and advanced data types within a Java application that uses SQL Server as its database.  
   

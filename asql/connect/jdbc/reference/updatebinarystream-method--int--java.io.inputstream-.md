@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # updateBinaryStream Method (int, java.io.InputStream)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Updates the designated column with a binary stream value.  
   

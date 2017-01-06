@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # valueOf Method (java.sql.Timestamp, java.util.Calendar)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Creates a **DateTimeOffset** object representing a point in time at a particular offset from GMT given a java.sql.Timestamp value and a java.util.Calendar value indicating the offset.  
   

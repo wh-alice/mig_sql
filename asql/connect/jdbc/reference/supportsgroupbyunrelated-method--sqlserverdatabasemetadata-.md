@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # supportsGroupByUnrelated Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether this database supports using a column that is not in the SELECT statement in a GROUP BY clause.  
   

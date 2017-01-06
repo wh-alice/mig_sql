@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getConnection Method (SQLServerPooledConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Creates an object handle for the physical connection that this [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) object represents.  
   

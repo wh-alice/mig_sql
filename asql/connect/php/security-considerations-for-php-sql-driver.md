@@ -28,7 +28,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Security Considerations for PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic describes security considerations that are specific to developing, deploying, and running applications that use the Microsoft Drivers for PHP for SQL Server. For more detailed information about SQL Server security, see [Data security and compliance](http://go.microsoft.com/fwlink/?LinkId=129225).  
   

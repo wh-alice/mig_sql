@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setAsciiStream Method (int, java.io.InputStream, int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the designated parameter number to the given InputStream object with the given number of bytes.  
   

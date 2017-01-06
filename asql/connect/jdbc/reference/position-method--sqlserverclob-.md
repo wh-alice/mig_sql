@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # position Method (SQLServerClob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the character position of the specified CLOB object or substring in the CLOB based on the given starting position.  
   

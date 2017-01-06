@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # allProceduresAreCallable Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether the current user has permissions to call all the procedures that are returned by the [getProcedures](../../../connect/jdbc/reference/getprocedures-method--sqlserverdatabasemetadata-.md) method.  
   

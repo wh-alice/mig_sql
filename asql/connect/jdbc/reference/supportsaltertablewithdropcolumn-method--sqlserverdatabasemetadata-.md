@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # supportsAlterTableWithDropColumn Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether this database supports ALTER TABLE with drop column.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # setCharacterStream Method (int, java.io.Reader, int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Sets the designated parameter to the given Reader object, which is the given number of characters long.  
   

@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Caching Result Set Data Sample
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This Microsoft JDBC Driver for SQL Server sample application demonstrates how to retrieve a large set of data from a database, and then control the number of rows of data that are cached on the client by using the [setFetchSize](../../connect/jdbc/reference/setfetchsize-method--sqlserverresultset-.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object.  
   

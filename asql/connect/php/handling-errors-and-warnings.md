@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Handling Errors and Warnings
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 If you are using the PDO_SQLSRV driver, you can find more information about errors and error handling on the [PDO](http://go.microsoft.com/fwlink/?LinkID=187441) website.  
   

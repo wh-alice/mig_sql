@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # System Requirements, Installation, and Driver Files
-[!INCLUDE[Driver_ODBC_Download](../../../connect/odbc/linux/includes)]
+![Download](../../../ssdt/media/download.png)[Download ODBC Driver](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
 
   The ODBC Driver 11 for SQL Server supports connections to SQL Server 2014, SQL Server 2012 R2, SQL Server 2008 R2, SQL Server 2008, and SQL Server 2005.  
   

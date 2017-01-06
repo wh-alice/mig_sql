@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 2: Create a SQL database for ADO.NET development
-[!INCLUDE[Driver_ADODotNet_Download](../../connect/ado-net/includes)]
+![Download](../../ssdt/media/download.png)[Download .Net Driver](https://msdn.microsoft.com/vstudio/aa496123.aspx)
 
 The samples in this section only work with the AdventureWorks schema, on either Microsoft SQL Server or Azure SQL Database.  
  

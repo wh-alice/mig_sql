@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Download Microsoft PHP Driver for SQL Server
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The Microsoft Drivers for PHP for SQL Server allow PHP developers to access SQL Server databases. The drivers rely on the Microsoft SQL Server ODBC Driver to handle the low-level communication with SQL Server.  
   

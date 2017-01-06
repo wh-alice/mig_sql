@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getXAResource Method (SQLServerXAConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves a [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) object that the transaction manager will use to manage this [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) object's participation in a distributed transaction.  
   

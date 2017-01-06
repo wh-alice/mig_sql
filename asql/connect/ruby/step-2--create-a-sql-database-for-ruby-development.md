@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Step 2: Create a SQL database for Ruby development
-[!INCLUDE[Driver_Ruby_Download](../../connect/ruby/includes)]
+![Download](../../ssdt/media/download.png)[Install Ruby Driver](http://msdn.microsoft.com/library/mt711041.aspx)
 
 The samples in this section only work with the AdventureWorks schema, on either Microsoft SQL Server or Azure SQL Database.  
  

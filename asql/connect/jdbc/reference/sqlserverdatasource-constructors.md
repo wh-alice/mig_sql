@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # SQLServerDataSource Constructors
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   For more information on the SQLServerDataSource constructors, see [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md).  
   

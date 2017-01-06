@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getImportedKeys Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves a description of the primary key columns that are referenced by the foreign key columns in a table.  
   

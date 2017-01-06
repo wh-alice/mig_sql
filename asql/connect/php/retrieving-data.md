@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Retrieving Data
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 This topic and the topics in this section discuss how to retrieve data.  
   

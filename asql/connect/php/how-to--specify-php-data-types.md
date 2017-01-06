@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # How to: Specify PHP Data Types
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 When using the PDO_SQLSRV driver, you can specify the PHP data type when retrieving data from the server with PDOStatement::bindColumn and PDOStatement::bindParam. See [PDOStatement::bindColumn](../../connect/php/pdostatement--bindcolumn.md) and [PDOStatement::bindParam](../../connect/php/pdostatement--bindparam.md) for more information.  
   

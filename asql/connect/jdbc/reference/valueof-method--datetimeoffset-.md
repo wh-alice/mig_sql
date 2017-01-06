@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # valueOf Method (DateTimeOffset)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Creates a **DateTimeOffset** object representing a point in time at a particular offset from GMT.  
   

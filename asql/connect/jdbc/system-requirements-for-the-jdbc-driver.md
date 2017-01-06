@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # System Requirements for the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   To access data from a SQL Server or Azure SQL Database by using the Microsoft JDBC Driver for SQL Server, you must have the following components installed on your computer:  
   

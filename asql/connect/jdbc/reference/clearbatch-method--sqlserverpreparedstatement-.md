@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # clearBatch Method (SQLServerPreparedStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Empties the current list of SQL commands for this [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object.  
   

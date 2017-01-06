@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # isSigned Method (SQLServerParameterMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether values for the designated parameter can be signed numbers.  
   

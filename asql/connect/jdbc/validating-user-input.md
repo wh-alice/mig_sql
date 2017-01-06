@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Validating User Input
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you construct an application that accesses data, you should assume all user input to be malicious until proven otherwise. Failure to do this can leave your application vulnerable to attack. One type of attack that can occur is called SQL injection, where malicious code is added to strings that are later passed to an instance of SQL Server to be parsed and run. To avoid this type of attack, you should use stored procedures with parameters where possible, and always validate user input.  
   

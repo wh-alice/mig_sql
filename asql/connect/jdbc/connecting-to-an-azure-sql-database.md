@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connecting to an Azure SQL database
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This topic discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to a Azure SQL Database. For more information about connecting to a Azure SQL Database, see:  
   

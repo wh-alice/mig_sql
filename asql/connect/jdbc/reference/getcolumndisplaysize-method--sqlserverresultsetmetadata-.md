@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getColumnDisplaySize Method (SQLServerResultSetMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns the normal maximum width, in characters, for the designated column.  
   

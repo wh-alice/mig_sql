@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getFetchDirection Method (SQLServerStatement)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the direction for fetching rows from database tables that is the default for result sets that are generated from this [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object.  
   

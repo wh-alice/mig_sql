@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # insertsAreDetected Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether or not a visible row insert can be detected by calling the method [rowInserted](../../../connect/jdbc/reference/rowinserted-method--sqlserverresultset-.md) method of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) class.  
   

@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # sqlsrv_cancel
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 Cancels a statement. This means that any pending results for the statement are discarded. After this function is called, the statement can be re-executed if it was prepared with [sqlsrv_prepare](../../connect/php/sqlsrv_prepare.md). Calling this function is not necessary if all the results associated with the statement have been consumed.  
   

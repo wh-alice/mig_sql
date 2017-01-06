@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getArray Method (int)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves the value of the designated parameter as an Array object given the parameter index.  
   

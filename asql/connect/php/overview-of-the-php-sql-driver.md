@@ -26,7 +26,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Overview of the PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 The Microsoft Drivers for PHP for SQL Server is a PHP extension that provides data access to SQL Server 2005 and later versions including Azure SQL Database. The extension provides a procedural interface (the SQLSRV driver) and an object-oriented interface (the PDO_SQLSRV driver) for accessing data in all versions (including Express) beginning with SQL Server 2005 (support for PHP for SQL Server versions 3.1 and later begins with SQL Server 2008). The Microsoft Drivers for PHP for SQL Server API includes support for Windows Authentication, transactions, parameter binding, streaming, metadata access, and error handling.  
   

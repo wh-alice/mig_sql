@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connecting to SQL Server with the JDBC Driver
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   One of the most fundamental things that you will do with the Microsoft JDBC Driver for SQL Server is to make a connection to a SQL Server database. All interaction with the database occurs through the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) object, and because the JDBC driver has such a flat architecture, almost all interesting behavior touches the SQLServerConnection object.  
   

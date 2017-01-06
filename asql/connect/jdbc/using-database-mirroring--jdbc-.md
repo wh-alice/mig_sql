@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Database Mirroring (JDBC)
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Database mirroring is primarily a software solution for increasing database availability and data redundancy. The Microsoft JDBC Driver for SQL Server provides implicit support for database mirroring, so that the developer does not need to write any code or take any other action when it has been configured for the database.  
   

@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # JDBC Specification Compliance
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
 * [JDBC 4.1 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4.1-compliance-for-the-jdbc-driver.md)
 * [JDBC 4.2 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4.1-compliance-for-the-jdbc-driver.md)

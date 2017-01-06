@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # supportsCatalogsInIndexDefinitions Method (SQLServerDatabaseMetaData)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Retrieves whether a catalog name can be used in an index definition statement.  
   

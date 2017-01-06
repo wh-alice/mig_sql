@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Connection URL Sample
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   This Microsoft JDBC Driver for SQL Server sample application demonstrates how to connect to a SQL Server database by using a connection URL. It also demonstrates how to retrieve data from a SQL Server database by using an SQL statement.  
   

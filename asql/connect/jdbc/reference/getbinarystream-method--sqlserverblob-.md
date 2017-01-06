@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getBinaryStream Method (SQLServerBlob)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Returns an input stream to read data from the BLOB.  
   

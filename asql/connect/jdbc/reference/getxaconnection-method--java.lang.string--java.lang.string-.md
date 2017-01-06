@@ -32,7 +32,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getXAConnection Method (java.lang.String, java.lang.String)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Tries to establish a physical database connection using the given user name and password.  
   

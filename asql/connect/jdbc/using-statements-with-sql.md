@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Using Statements with SQL
-[!INCLUDE[Driver_JDBC_Download](../../connect/jdbc/includes)]
+![Download](../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   When you work with data in a SQL Server database by using the Microsoft JDBC Driver for SQL Server and inline SQL statements, there are different classes that you can use. Which class you use depends on the type of SQL statement that you want to run.  
   

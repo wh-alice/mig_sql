@@ -29,7 +29,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # Specifying a Cursor Type and Selecting Rows
-[!INCLUDE[Driver_PHP_Download](../../connect/php/includes)]
+![Download](../../ssdt/media/download.png)[Download PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)
 
 You can create a result set with rows that you can access in any order, depending on the cursor type.  This section discusses client-side and server-side cursors:  
   

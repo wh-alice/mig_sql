@@ -27,7 +27,7 @@ translation.priority.ht:
   - "zh-tw"
 ---
 # getClientConnectionID Method (SQLServerConnection)
-[!INCLUDE[Driver_JDBC_Download](../../../connect/jdbc/includes)]
+![Download](../../../ssdt/media/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)
 
   Gets the connection ID of the most recent connection attempt, regardless of whether the attempt succeeded or failed.  
   

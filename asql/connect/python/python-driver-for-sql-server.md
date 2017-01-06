@@ -15,14 +15,12 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Python SQL Driver
-[!INCLUDE[Driver_Python_Download](../../connect/python/pymssql/includes)]
-
 You can  connect to a SQL Database using Python on Windows, Linux, or Mac.   
   
 ## Getting Started  
 There are several python SQL Drivers available.  Choose which one you want to use, and configure your development environment:
-* [Python SQL Driver - pyodbc](../../connect/python/pyodbc/python-sql-driver---pyodbc.md)
-* [Python SQL Driver - pymssql](../../connect/python/pymssql/python-sql-driver---pymssql.md)
+* [Python SQL Driver - pyodbc](Python%20SQL%20Driver%20-%20pyodbc.md)
+* [Python SQL Driver - pymssql](Python%20SQL%20Driver%20-%20pymssql.md)
   
 ## Documentation  
 [Python documentation](https://www.python.org/doc/)  

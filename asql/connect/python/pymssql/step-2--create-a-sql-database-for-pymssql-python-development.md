@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Step 2: Create a SQL database for pymssql Python development
-[!INCLUDE[Driver_Python_Download](../../../connect/python/pymssql/includes)]
+[!INCLUDE[Driver_Python_Download](../../../connect/python/pymssql/includes/driver_python_download.md)]
 
 The samples in this section only work with the AdventureWorks schema, on either Microsoft SQL Server or Azure SQL Database.  
  

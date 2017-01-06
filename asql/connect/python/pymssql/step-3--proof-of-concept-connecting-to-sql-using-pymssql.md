@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql
-[!INCLUDE[Driver_Python_Download](../../../connect/python/pymssql/includes)]
+[!INCLUDE[Driver_Python_Download](../../../connect/python/pymssql/includes/driver_python_download.md)]
 
 This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
   

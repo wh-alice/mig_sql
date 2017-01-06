@@ -15,7 +15,7 @@ ms.author: "annemill"
 manager: "jhubbard"
 ---
 # Python SQL Driver - pymssql
-[!INCLUDE[Driver_Python_Download](../../../connect/python/pymssql/includes)]
+[!INCLUDE[Driver_Python_Download](../../../connect/python/pymssql/includes/driver_python_download.md)]
 
 ## Getting Started
 

@@ -35,37 +35,37 @@ SQL Server supports a wide variety of drivers, which are used by client applicat
  ADO.NET is a library that is a standard part of the .Net framework.  It is a C# implementation of the TDS protocol, which is supported by all modern versions of SQL Server.    
                           This driver is developed, tested, and supported by Microsoft.  
   
- [Microsoft ADO.NET for SQL Server](../connect/ado-net/microsoft-ado.net-for-sql-server.md)  
+ [Microsoft ADO.NET for SQL Server](../Topic/Microsoft%20ADO.NET%20for%20SQL%20Server.md)  
   
 ### JDBC  
  The JDBC SQL driver is a Java implementation of the TDS protocol, which is supported by all modern versions of SQL Server.  This driver is developed, tested, and supported by Microsoft.  
   
- [Microsoft JDBC Driver for SQL Server](../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)  
+ [Microsoft JDBC Driver for SQL Server](../Topic/Microsoft%20JDBC%20Driver%20for%20SQL%20Server.md)  
   
 ### ODBC  
  The ODBC SQL driver is a C++ implementation of the TDS protocol, which is supported by all modern versions of SQL Server.  This driver is developed, tested, and supported by Microsoft.  
   
- [Microsoft ODBC Driver for SQL Server](../connect/odbc/microsoft-odbc-driver-for-sql-server.md)  
+ [Microsoft ODBC Driver for SQL Server](../Topic/Microsoft%20ODBC%20Driver%20for%20SQL%20Server.md)  
   
 ### PHP  
  The PHP SQL driver relies on the Microsoft SQL Server ODBC Driver to handle the low-level communication with SQL Server.  This driver is developed, tested, and supported by Microsoft.  
   
- [Microsoft PHP Driver for SQL Server](../connect/php/microsoft-php-driver-for-sql-server.md)  
+ [Microsoft PHP Driver for SQL Server](../Topic/Microsoft%20PHP%20Driver%20for%20SQL%20Server.md)  
   
 ### Node.js  
  The tedious module is a javascript implementation of the TDS protocol, which is supported by all modern versions of SQL Server.  The driver is an open source project, available on Github.  
   
- [Node.js Driver for SQL Server](../connect/node-js/node.js-driver-for-sql-server.md)  
+ [Node.js Driver for SQL Server](../Topic/Node.js%20Driver%20for%20SQL%20Server.md)  
   
 ### Python  
  The pymssql module is a Python implementation of the TDS protocol, which is supported by all modern versions of SQL Server.  
   
- [Python Driver for SQL Server](../connect/python/python-driver-for-sql-server.md)  
+ [Python Driver for SQL Server](../Topic/Python%20Driver%20for%20SQL%20Server.md)  
   
 ### Ruby  
  The TinyTDS gem is a Ruby implementation of the TDS protocol, which is supported by all modern versions of SQL Server.  
   
- [Ruby Driver for SQL Server](../connect/ruby/ruby-driver-for-sql-server.md)  
+ [Ruby Driver for SQL Server](../Topic/Ruby%20Driver%20for%20SQL%20Server.md)  
   
 ## Legacy SQL Drivers  
  The following SQL Drivers were developed and tested by Microsoft, but are not recommended to be used for new development. Each driver has a support statement that can be found by following the links.  

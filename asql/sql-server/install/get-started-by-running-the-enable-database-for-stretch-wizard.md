@@ -148,7 +148,7 @@ If you want to use a different type of filter function to select rows to migrate
   
  If a database master key already exists, enter the password for it.  
   
- ![Secure credentials page of the Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Secure credentials page of the Stretch Database wizard")  
+ ![Secure credentials page of the Stretch Database wizard](../../sql-server/install/media/stretch-wizard-6b.PNG "Secure credentials page of the Stretch Database wizard")  
   
  If the database does not have an existing master key, enter a strong password to create a database master key.  
   
@@ -173,7 +173,7 @@ If you want to use a different type of filter function to select rows to migrate
   
  To monitor the status of data migration, see [Monitor and troubleshoot data migration &#40;Stretch Database&#41;](../../sql-server/install/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
- ![Results page of the Stretch Database wizard](../../sql-server/install/media/stretch-wizard-9.PNG "Results page of the Stretch Database wizard")  
+ ![Results page of the Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Results page of the Stretch Database wizard")  
   
 ##  <a name="KnownIssues"></a> Troubleshooting the wizard  
  **The Stretch Database wizard failed.**  
